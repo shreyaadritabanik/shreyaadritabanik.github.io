@@ -7,151 +7,186 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #4CAF50;
-            --secondary-color: #333;
-            --bg-color: #f9f9f9;
-            --text-color: #333;
+            --primary-color: #2E3B55; /* Deep blue */
+            --secondary-color: #FFFFFF; /* White */
+            --accent-color: #AAB2BD; /* Light gray */
+            --bg-color: #E5E5E5; /* Background gray */
+            --text-color: #333; /* Dark text */
             --heading-font: 'Poppins', sans-serif;
             --body-font: 'Poppins', sans-serif;
         }
+
         body {
             margin: 0;
             padding: 0;
             font-family: var(--body-font);
             background-color: var(--bg-color);
             color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
+
+        .container {
+            background-color: var(--secondary-color);
+            border-radius: 15px;
+            max-width: 900px;
+            margin: 20px;
+            padding: 20px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
         header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 2rem 1rem;
             text-align: center;
+            padding: 1rem;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            border-radius: 15px 15px 0 0;
         }
+
         header h1 {
-            font-size: 2.5rem;
-            margin: 0.5rem 0;
-        }
-        header p {
             margin: 0;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        header p {
+            margin: 0.5rem 0 0;
             font-size: 1rem;
         }
+
         nav {
             display: flex;
             justify-content: center;
-            background: var(--secondary-color);
-            padding: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--accent-color);
+            margin-bottom: 1rem;
         }
+
         nav a {
-            color: white;
+            color: var(--primary-color);
             text-decoration: none;
             margin: 0 1rem;
             font-weight: 600;
+            font-size: 1rem;
             transition: color 0.3s;
         }
+
         nav a:hover {
-            color: var(--primary-color);
+            color: var(--accent-color);
         }
+
         section {
-            padding: 4rem 1rem;
-            max-width: 800px;
-            margin: 0 auto;
             text-align: center;
+            padding: 2rem 1rem;
         }
+
         section h2 {
             font-size: 2rem;
             margin-bottom: 1rem;
-            color: var(--secondary-color);
-        }
-        .about p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-        }
-        .projects .project-item {
-            margin: 2rem 0;
-            text-align: left;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 1rem;
-            background: white;
-        }
-        .projects .project-item h3 {
             color: var(--primary-color);
-            margin: 0 0 0.5rem;
         }
+
+        .about p, .projects .project-item, .resume ul {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .projects .project-item {
+            background-color: var(--bg-color);
+            margin: 1rem auto;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .projects .project-item h3 {
+            margin: 0 0 0.5rem;
+            color: var(--primary-color);
+        }
+
         .resume ul {
             list-style: none;
             padding: 0;
         }
+
         .resume li {
             margin: 1rem 0;
-            text-align: left;
         }
+
         .resume h3 {
-            margin: 0;
+            margin: 0 0 0.5rem;
             color: var(--primary-color);
         }
+
         footer {
-            background-color: var(--secondary-color);
-            color: white;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
             text-align: center;
-            padding: 1rem 0;
+            padding: 1rem;
             margin-top: 2rem;
+            border-radius: 0 0 15px 15px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Your Name</h1>
-        <p>Welcome to my personal portfolio website!</p>
-    </header>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>
-            Hello! I'm <strong>Your Name</strong>, a [describe your profession, e.g., "Software Engineer"] passionate about building impactful projects and sharing my knowledge with the world. 
-            I love working on innovative ideas and learning new technologies!
-        </p>
-    </section>
-    <section id="projects" class="projects">
-        <h2>My Projects</h2>
-        <div class="project-item">
-            <h3>Project Title 1</h3>
-            <p>A brief description of your first project. Highlight key technologies or challenges solved.</p>
-            <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
-        </div>
-        <div class="project-item">
-            <h3>Project Title 2</h3>
-            <p>A brief description of your second project. Explain its purpose and any key outcomes.</p>
-            <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a>
-        </div>
-    </section>
-    <section id="resume" class="resume">
-        <h2>My Resume</h2>
-        <ul>
-            <li>
-                <h3>Job Title 1</h3>
-                <p>Company Name | Date Range</p>
-                <p>A short summary of your role, achievements, and impact.</p>
-            </li>
-            <li>
-                <h3>Job Title 2</h3>
-                <p>Company Name | Date Range</p>
-                <p>A short summary of your role, achievements, and impact.</p>
-            </li>
-        </ul>
-    </section>
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <p>Feel free to reach out via email or connect with me on social media!</p>
-        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-    </section>
-    <footer>
-        <p>&copy; 2025 Your Name. Built with ❤️.</p>
-    </footer>
+    <div class="container">
+        <header>
+            <h1>Your Name</h1>
+            <p>A dynamic problem solver building impactful projects.</p>
+        </header>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#projects">My Projects</a>
+            <a href="#resume">Resume</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Hello! I'm <strong>Your Name</strong>, a [describe your profession, e.g., "Software Engineer"] who is passionate about creating innovative solutions and sharing knowledge. 
+                With expertise in modern technologies, I strive to make a difference through technology.
+            </p>
+        </section>
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="project-item">
+                <h3>Project 1</h3>
+                <p>A brief description of the project. Highlight its purpose and key technologies.</p>
+                <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project-item">
+                <h3>Project 2</h3>
+                <p>A brief description of the project. Highlight its purpose and key technologies.</p>
+                <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a>
+            </div>
+        </section>
+        <section id="resume">
+            <h2>Resume</h2>
+            <ul>
+                <li>
+                    <h3>Job Title 1</h3>
+                    <p>Company Name | Date Range</p>
+                    <p>A brief summary of your responsibilities and achievements.</p>
+                </li>
+                <li>
+                    <h3>Job Title 2</h3>
+                    <p>Company Name | Date Range</p>
+                    <p>A brief summary of your responsibilities and achievements.</p>
+                </li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Feel free to reach out via email or connect with me on social media!</p>
+            <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        </section>
+        <footer>
+            <p>&copy; 2025 Your Name. Designed with ❤️</p>
+        </footer>
+    </div>
 </body>
 </html>
