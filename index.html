@@ -3,264 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Resume</title>
     <style>
         :root {
-            --primary-color: #2E3B55; /* Deep blue */
-            --secondary-color: #FFFFFF; /* White */
-            --accent-color: #AAB2BD; /* Light gray */
-            --bg-color: #E5E5E5; /* Background gray */
-            --text-color: #333; /* Dark text */
-            --heading-font: 'Poppins', sans-serif;
-            --body-font: 'Poppins', sans-serif;
+            --primary-color: #083768;
+            --accent-color: #6c757d;
+            --text-color: #3b3b3b;
         }
 
         body {
+            font-family: Georgia, serif;
             margin: 0;
             padding: 0;
-            font-family: var(--body-font);
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        .container {
-            background-color: var(--secondary-color);
-            border-radius: 15px;
-            max-width: 900px;
-            margin: 20px;
-            padding: 20px;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            background-color: #f9f9f9;
         }
 
         header {
-            text-align: center;
-            padding: 1rem;
             background-color: var(--primary-color);
-            color: var(--secondary-color);
-            border-radius: 15px 15px 0 0;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            font-weight: 600;
-        }
-
-        header p {
-            margin: 0.5rem 0 0;
-            font-size: 1rem;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--accent-color);
-            margin-bottom: 1rem;
-        }
-
-        nav a {
-            color: var(--primary-color);
-            text-decoration: none;
-            margin: 0 1rem;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--accent-color);
-        }
-
-        section {
+            color: white;
+            padding: 40px;
             text-align: center;
-            padding: 2rem 1rem;
+            font-size: 2.5em;
+            font-weight: bold;
         }
 
-        section h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-        }
-
-        .about p, .projects .project-item, .resume ul {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-            text-align: justify;
-        }
-
-        .projects .project-item {
-            background-color: var(--bg-color);
-            margin: 1rem auto;
-            padding: 1rem;
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
             border-radius: 10px;
-            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .projects .project-item h3 {
-            margin: 0 0 0.5rem;
+        h2 {
             color: var(--primary-color);
-        }
-
-        .resume ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .resume li {
-            margin: 1rem 0;
-        }
-
-        .resume h3 {
-            margin: 0 0 0.5rem;
-            color: var(--primary-color);
-        }
-
-        footer {
-            background-color: var(--primary-color);
-            color: var(--secondary-color);
             text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-            border-radius: 0 0 15px 15px;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        h3 i {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+
+        .timeline {
+            border-left: 3px solid var(--accent-color);
+            padding-left: 15px;
+            margin-top: 20px;
+        }
+
+        .timeline-entry {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .timeline-entry::before {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            left: -21.5px;
+            top: 5px;
+        }
+
+        .timeline-entry h4 {
+            color: var(--primary-color);
+            margin: 0;
+        }
+
+        .timeline-entry p {
+            margin: 5px 0;
+            color: var(--text-color);
+            font-size: 0.95em;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Shreya Adrita Banik</h1>
-            <p>A passionate problem solver driving impactful change through creative projects.</p>
-        </header>
-        <nav>
-            <a href="#about">About Me</a>
-            <a href="#projects">My Projects</a>
-            <a href="#resume">Resume</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>
-                Hello! I'm <strong>Shreya Adrita Banik</strong>, a Computer Science and Engineering graduate student who is passionate about creating innovative solutions and sharing knowledge. 
-                With expertise in modern technologies, I strive to make a difference through technology.
-            </p>
-        </section>
-        <section id="projects">
-            <h2>My Projects</h2>
-            <div class="project-item">
-                <h3>Movie Review Classifier Using NLP</h3>
-                <p>This project focusd on creating a neural network classifier for IMDB reviews, aiming to evaluate the effectiveness of different models. We used Pandas for data handling, GloVe embeddings for word representation, and Keras for model implementation. A shallow neural network achieved modest performance, but replacing dense layers with unidirectional and bidirectional LSTMs significantly improved accuracy and F1 scores, with bidirectional LSTMs performing best.</p>
-                <a href="https://github.com/shreyaadritabanik/Movie-Review-Classifier-using-NLP" target="_blank">View on GitHub</a>
-            </div>
-            <div class="project-item">
-                <h3>FitHoba: Diet Planner Website</h3>
-                <p>it Hoba is an innovative and user friendly fitness and well-being diet planner website which has been devoloped using the MERN stack. .</p>
-                <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a>
-            </div>
-        <section id="resume">
-    <h2 style="font-size: 2em; text-align: center; color: var(--primary-color);">My Resume</h2>
+
+<header>
+    [Your Full Name]
+</header>
+
+<div class="container">
+    <h2>My Resume</h2>
 
     <!-- WORK EXPERIENCE -->
-    <h3 style="font-size: 1.5em; display: flex; align-items: center; color: var(--text-color);">
-        <i class="fas fa-briefcase" style="margin-right: 10px; color: var(--primary-color);"></i> 
-        Work Experience
-    </h3>
-    <div style="border-left: 3px solid var(--accent-color); padding-left: 15px; margin-top: 20px;">
-        <div style="margin-bottom: 30px; position: relative;">
-            <div style="position: absolute; width: 10px; height: 10px; background-color: var(--accent-color); border-radius: 50%; left: -21.5px; top: 5px;"></div>
-            <h4 style="color: var(--primary-color);">Undergraduate Teaching Assistant (Part-time)</h4>
-            <p>
-                Department of Computer Science and Engineering,<br>
-                BRAC University<br>
-                <span style="color: var(--primary-color); font-weight: bold;">July 2023 — January 2025</span>
+    <h3><i class="fas fa-briefcase"></i> Work Experience</h3>
+    <div class="timeline">
+        <div class="timeline-entry">
+            <h4>Undergraduate Teaching Assistant (Part-time)</h4>
+            <p>Department of Computer Science and Engineering,<br>BRAC University<br>
+                <strong>May 2024 — Present</strong>
             </p>
-           <!--...<p>Assisted with: <br><strong>CSE221- Algorithms</strong></p>--> 
+            <p>Assisted with: <strong>CSE221- Algorithms</strong></p>
         </div>
 
-        <div style="margin-bottom: 30px; position: relative;">
-            <div style="position: absolute; width: 10px; height: 10px; background-color: var(--accent-color); border-radius: 50%; left: -21.5px; top: 5px;"></div>
-            <h4 style="color: var(--primary-color);">Maths Instructor</h4>
-            <p>
-                Udvash<br>
-                <span style="color: var(--primary-color); font-weight: bold;">November 2021 — March 2022</span>
+        <div class="timeline-entry">
+            <h4>Undergraduate Teaching Assistant (Part-time)</h4>
+            <p>Department of Mathematics and Natural Sciences,<br>BRAC University<br>
+                <strong>October 2023 — May 2024</strong>
             </p>
-           
+            <p>Assisted with: <strong>STA201- Statistics and Probability</strong></p>
         </div>
     </div>
 
     <!-- RESEARCH EXPERIENCE -->
-    <h3 style="font-size: 1.5em; display: flex; align-items: center; color: var(--text-color);">
-        <i class="fas fa-chart-line" style="margin-right: 10px; color: var(--primary-color);"></i> 
-        Research Experience
-    </h3>
-    <div style="border-left: 3px solid var(--accent-color); padding-left: 15px; margin-top: 20px;">
-        <div style="margin-bottom: 30px; position: relative;">
-            <div style="position: absolute; width: 10px; height: 10px; background-color: var(--accent-color); border-radius: 50%; left: -21.5px; top: 5px;"></div>
+    <h3><i class="fas fa-chart-line"></i> Research Experience</h3>
+    <div class="timeline">
+        <div class="timeline-entry">
             <div style="display: flex; align-items: flex-start;">
                 <img src="thesis_poster.png" alt="Thesis Poster" width="150" height="140" style="margin-right: 10px; border-radius: 10px;">
                 <div>
-                    <h4 style="color: var(--primary-color); margin: 0; font-size: 1.2em;">
-                        Analyzing Political Bias in Media Discourse: A Computational Approach Using NLP to Examine Israel-Palestine Coverage
-                    </h4>
-                    <p style="color: var(--text-color); margin: 5px 0 0; font-size: 0.9em;">
-                        Natural Language Processing, Computational Social Science, Artificial Intelligence, Machine Learning
-                    </p>
-                    <p style="font-size: 0.9em;">
-                       thesis
-                    </p>
+                    <h4>Analyzing Political Bias in Media Discourse</h4>
+                    <p><strong>Natural Language Processing, Computational Social Science, Artificial Intelligence</strong></p>
+                    <p>Developed a computational framework to assess political bias in media discourse, focusing on Israel-Palestine conflict coverage. Used GPT-3 for data augmentation, fine-tuned RoBERTa and LLaMA models, and achieved an F1 score of 77.4% in a seven-class task.</p>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- EDUCATION -->
-    <h3 style="font-size: 1.5em; display: flex; align-items: center; color: var(--text-color);">
-        <i class="fas fa-graduation-cap" style="margin-right: 10px; color: var(--primary-color);"></i> 
-        Education
-    </h3>
-    <div style="border-left: 3px solid var(--accent-color); padding-left: 15px; margin-top: 20px;">
-        <div style="margin-bottom: 30px; position: relative;">
-            <div style="position: absolute; width: 10px; height: 10px; background-color: var(--accent-color); border-radius: 50%; left: -21.5px; top: 5px;"></div>
-            <h4 style="color: var(--primary-color);">B.Sc. in Computer Science and Engineering</h4>
-            <p>
-                Department of Computer Science and Engineering,<br>
-                BRAC University<br>
-                <span style="color: var(--primary-color); font-weight: bold;">June 2021 — Present</span>
+    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+    <div class="timeline">
+        <div class="timeline-entry">
+            <h4>B.Sc. in Computer Science and Engineering</h4>
+            <p>Department of Computer Science and Engineering,<br>BRAC University<br>
+                <strong>June 2021 — Present</strong>
             </p>
-           <!--. <p style="text-decoration-line: underline; font-weight: bold;">Notable Courses:</p>
-            <p style="font-size: 0.9em;">
-                CSE440 - Natural Language Processing<br> 
-                
-            </p> -->
-        </div>
-
-        <div style="margin-bottom: 30px; position: relative;">
-            <div style="position: absolute; width: 10px; height: 10px; background-color: var(--accent-color); border-radius: 50%; left: -21.5px; top: 5px;"></div>
-            <h4 style="color: var(--primary-color);">Higher Secondary School Certificate (HSC)</h4>
+            <p><strong>Notable Courses:</strong></p>
             <p>
-                Viquarunnesa Noon School and College<br>
-                <span style="color: var(--primary-color); font-weight: bold;">2020</span>
+                CSE440 - Natural Language Processing<br>
+                CSE422 - Artificial Intelligence<br>
+                CSE428 - Image Processing<br>
+                STA201 - Statistics and Probability<br>
+                CSE321 - Operating Systems<br>
+                MAT216 - Linear Algebra and Fourier Analysis<br>
+                CSE340 - Computer Architecture
             </p>
-           GPA: 5.00/5.00 <br>
-            General Scholarship
         </div>
     </div>
-</section>
+</div>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Feel free to reach out via email or connect with me on social media!</p>
-            <p>Email: <a href="mailto:your.email@example.com">shreyaadrita108@gmail.com</a></p>
-        </section>
-        <footer>
-            <p>&copy; 2025 Shreya Adrita Banik </p>
-        </footer>
-    </div>
 </body>
 </html>
