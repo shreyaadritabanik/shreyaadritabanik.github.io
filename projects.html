@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #083768;
+            --accent-color: #6c757d;
+            --text-color: #3b3b3b;
+            --secondary-color: #FFFFFF;
+            --bg-color: #f9f9f9;
+            --heading-font: Georgia, serif;
+            --body-font: Georgia, serif;
+        }
+
+        body {
+            font-family: var(--body-font);
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            font-size: 1em;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: var(--secondary-color);
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            text-align: center;
+            font-size: 2em;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        h3 i {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+
+        .timeline {
+            border-left: 3px solid var(--accent-color);
+            padding-left: 15px;
+            margin-top: 20px;
+        }
+
+        .timeline-entry {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .timeline-entry::before {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            left: -21.5px;
+            top: 5px;
+        }
+
+        .timeline-entry h4 {
+            color: var(--primary-color);
+            margin: 0;
+        }
+
+        .timeline-entry p {
+            margin: 5px 0;
+            color: var(--text-color);
+            font-size: 0.95em;
+        }
+
+        .project-item {
+            background-color: var(--bg-color);
+            margin: 1rem auto;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-item h3 {
+            margin: 0 0 0.5rem;
+            color: var(--primary-color);
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+            border-radius: 0 0 15px 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Shreya Adrita Banik</h1>
+            <p>A passionate problem solver driving impactful change through creative projects.</p>
+        </header>
+        <nav>
+            <a href="index.html">About Me</a>
+            <a href="#projects">My Projects</a>
+            <a href="index.html">Resume</a>
+            <a href="index.html">Contact</a>
+        </nav>
+
+      
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="project-item">
+                <h3>Movie Review Classifier Using NLP</h3>
+                <p>This project focused on creating a neural network classifier for IMDB reviews, aiming to evaluate the effectiveness of different models. We used Pandas for data handling, GloVe embeddings for word representation, and Keras for model implementation.</p>
+                <a href="https://github.com/shreyaadritabanik/Movie-Review-Classifier-using-NLP" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project-item">
+                <h3>FitHoba: Diet Planner Website</h3>
+                <p>Fit Hoba is an innovative and user-friendly fitness and well-being diet planner website developed using the MERN stack.</p>
+                <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a>
+            </div>
+        </section>
+
+
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Feel free to reach out via email or connect with me on social media!</p>
+            <p>Email: <a href="mailto:shreyaadrita108@gmail.com">shreyaadrita108@gmail.com</a></p>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Shreya Adrita Banik</p>
+        </footer>
+    </div>
+</body>
+</html>
