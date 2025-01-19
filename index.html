@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-color: #083768;
             --accent-color: #6c757d;
             --text-color: #3b3b3b;
+            --secondary-color: #FFFFFF;
+            --bg-color: #f9f9f9;
+            --heading-font: 'Poppins', sans-serif;
+            --body-font: 'Poppins', sans-serif;
         }
 
         body {
-            font-family: Georgia, serif;
+            font-family: var(--body-font);
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-color: var(--bg-color);
+            color: var(--text-color);
         }
 
         header {
@@ -28,17 +34,39 @@
         }
 
         .container {
-            max-width: 800px;
-            margin: 30px auto;
+            max-width: 900px;
+            margin: 20px auto;
             padding: 20px;
-            background-color: white;
-            border-radius: 10px;
+            background-color: var(--secondary-color);
+            border-radius: 15px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
         }
 
         h2 {
             color: var(--primary-color);
             text-align: center;
+            font-size: 2em;
         }
 
         h3 {
@@ -86,73 +114,131 @@
             color: var(--text-color);
             font-size: 0.95em;
         }
+
+        .project-item {
+            background-color: var(--bg-color);
+            margin: 1rem auto;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-item h3 {
+            margin: 0 0 0.5rem;
+            color: var(--primary-color);
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+            border-radius: 0 0 15px 15px;
+        }
     </style>
 </head>
 <body>
+    <div class="container">
+        <header>
+            Shreya Adrita Banik
+        </header>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#projects">My Projects</a>
+            <a href="#resume">Resume</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
-<header>
-    [Your Full Name]
-</header>
-
-<div class="container">
-    <h2>My Resume</h2>
-
-    <!-- WORK EXPERIENCE -->
-    <h3><i class="fas fa-briefcase"></i> Work Experience</h3>
-    <div class="timeline">
-        <div class="timeline-entry">
-            <h4>Undergraduate Teaching Assistant (Part-time)</h4>
-            <p>Department of Computer Science and Engineering,<br>BRAC University<br>
-                <strong>May 2024 — Present</strong>
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Hello! I'm <strong>Shreya Adrita Banik</strong>, a Computer Science and Engineering graduate student who is passionate about creating innovative solutions and sharing knowledge.
+                With expertise in modern technologies, I strive to make a difference through technology.
             </p>
-            <p>Assisted with: <strong>CSE221- Algorithms</strong></p>
-        </div>
+        </section>
 
-        <div class="timeline-entry">
-            <h4>Undergraduate Teaching Assistant (Part-time)</h4>
-            <p>Department of Mathematics and Natural Sciences,<br>BRAC University<br>
-                <strong>October 2023 — May 2024</strong>
-            </p>
-            <p>Assisted with: <strong>STA201- Statistics and Probability</strong></p>
-        </div>
-    </div>
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="project-item">
+                <h3>Movie Review Classifier Using NLP</h3>
+                <p>This project focused on creating a neural network classifier for IMDB reviews, aiming to evaluate the effectiveness of different models. We used Pandas for data handling, GloVe embeddings for word representation, and Keras for model implementation.</p>
+                <a href="https://github.com/shreyaadritabanik/Movie-Review-Classifier-using-NLP" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project-item">
+                <h3>FitHoba: Diet Planner Website</h3>
+                <p>Fit Hoba is an innovative and user-friendly fitness and well-being diet planner website developed using the MERN stack.</p>
+                <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a>
+            </div>
+        </section>
 
-    <!-- RESEARCH EXPERIENCE -->
-    <h3><i class="fas fa-chart-line"></i> Research Experience</h3>
-    <div class="timeline">
-        <div class="timeline-entry">
-            <div style="display: flex; align-items: flex-start;">
-                <img src="thesis_poster.png" alt="Thesis Poster" width="150" height="140" style="margin-right: 10px; border-radius: 10px;">
-                <div>
-                    <h4>Analyzing Political Bias in Media Discourse</h4>
-                    <p><strong>Natural Language Processing, Computational Social Science, Artificial Intelligence</strong></p>
-                    <p>Developed a computational framework to assess political bias in media discourse, focusing on Israel-Palestine conflict coverage. Used GPT-3 for data augmentation, fine-tuned RoBERTa and LLaMA models, and achieved an F1 score of 77.4% in a seven-class task.</p>
+        <!-- Resume Section -->
+        <section id="resume">
+            <h2>My Resume</h2>
+            <h3><i class="fas fa-briefcase"></i> Work Experience</h3>
+            <div class="timeline">
+                <div class="timeline-entry">
+                    <h4>Undergraduate Teaching Assistant (Part-time)</h4>
+                    <p>Department of Computer Science and Engineering,<br>BRAC University<br>
+                        <strong>May 2024 — Present</strong>
+                    </p>
+                    <p>Assisted with: <strong>CSE221- Algorithms</strong></p>
+                </div>
+                <div class="timeline-entry">
+                    <h4>Maths Instructor</h4>
+                    <p>Udvash<br>
+                        <strong>November 2021 — March 2022</strong>
+                    </p>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!-- EDUCATION -->
-    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-    <div class="timeline">
-        <div class="timeline-entry">
-            <h4>B.Sc. in Computer Science and Engineering</h4>
-            <p>Department of Computer Science and Engineering,<br>BRAC University<br>
-                <strong>June 2021 — Present</strong>
-            </p>
-            <p><strong>Notable Courses:</strong></p>
-            <p>
-                CSE440 - Natural Language Processing<br>
-                CSE422 - Artificial Intelligence<br>
-                CSE428 - Image Processing<br>
-                STA201 - Statistics and Probability<br>
-                CSE321 - Operating Systems<br>
-                MAT216 - Linear Algebra and Fourier Analysis<br>
-                CSE340 - Computer Architecture
-            </p>
-        </div>
-    </div>
-</div>
+            <h3><i class="fas fa-chart-line"></i> Research Experience</h3>
+            <div class="timeline">
+                <div class="timeline-entry">
+                    <div style="display: flex; align-items: flex-start;">
+                        <img src="thesis_poster.png" alt="Thesis Poster" width="150" height="140" style="margin-right: 10px; border-radius: 10px;">
+                        <div>
+                            <h4>Analyzing Political Bias in Media Discourse</h4>
+                            <p><strong>Natural Language Processing, Computational Social Science, Artificial Intelligence</strong></p>
+                            <p>Developed a computational framework to assess political bias in media discourse, focusing on Israel-Palestine conflict coverage. Achieved an F1 score of 77.4% in a seven-class task.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+            <div class="timeline">
+                <div class="timeline-entry">
+                    <h4>B.Sc. in Computer Science and Engineering</h4>
+                    <p>Department of Computer Science and Engineering,<br>BRAC University<br>
+                        <strong>June 2021 — Present</strong>
+                    </p>
+                    <p><strong>Notable Courses:</strong></p>
+                    <p>
+                        CSE440 - Natural Language Processing<br>
+                        CSE422 - Artificial Intelligence<br>
+                        CSE428 - Image Processing<br>
+                        STA201 - Statistics and Probability<br>
+                        CSE321 - Operating Systems<br>
+                        MAT216 - Linear Algebra and Fourier Analysis<br>
+                        CSE340 - Computer Architecture
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Feel free to reach out via email or connect with me on social media!</p>
+            <p>Email: <a href="mailto:shreyaadrita108@gmail.com">shreyaadrita108@gmail.com</a></p>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Shreya Adrita Banik</p>
+        </footer>
+    </div>
 </body>
 </html>
