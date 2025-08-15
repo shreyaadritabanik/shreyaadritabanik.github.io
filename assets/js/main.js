@@ -21,25 +21,47 @@ window.addEventListener('scroll', scrollHeader)
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
-const sections = document.querySelectorAll('section[id]')
-    
-const scrollActive = () =>{
-  	const scrollDown = window.scrollY
+// Select all sections that have an id
 
-	sections.forEach(current =>{
-		const sectionHeight = current.offsetHeight,
-			  sectionTop = current.offsetTop - 58,
-			  sectionId = current.getAttribute('id'),
-			  sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav__link');
+const header = document.querySelector('.header');
 
-		if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
-			sectionsClass.classList.add('active-link')
-		}else{
-			sectionsClass.classList.remove('active-link')
-		}                                                    
-	})
-}
-window.addEventListener('scroll', scrollActive)
+const scrollActive = () => {
+    const scrollY = window.pageYOffset;
+    const headerHeight = header.offsetHeight;
+
+    // Remove active-link from all links first
+    navLinks.forEach(link => link.classList.remove('active-link'));
+
+    sections.forEach((section, index) => {
+        const sectionTop = section.offsetTop - headerHeight;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+        const link = document.querySelector('.nav__menu a[href*=' + sectionId + ']');
+
+        // For last section, activate if scroll passed its top
+        if (
+            (index === sections.length - 1 && scrollY + 1 >= sectionTop) ||
+            (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight)
+        ) {
+            link.classList.add('active-link');
+        }
+    });
+};
+
+// Handle click highlighting
+navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        navLinks.forEach(l => l.classList.remove('active-link'));
+        this.classList.add('active-link');
+    });
+});
+
+window.addEventListener('scroll', scrollActive);
+
+
+
 /*=============== LIGHT DARK THEME ===============*/ 
 
 

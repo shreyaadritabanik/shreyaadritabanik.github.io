@@ -36,7 +36,9 @@
                         <li class="nav__item">
                             <a href="#home" class="nav__link active-link">
                                 <i class='bx bx-home'></i>
+                                
                             </a>
+                            
                         </li>
                         <li class="nav__item">
                             <a href="#about" class="nav__link">
@@ -51,6 +53,12 @@
                         <li class="nav__item">
                             <a href="#skills" class="nav__link">
                                 <i class='bx bx-book'></i>
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#research" class="nav__link">
+                                <i class='bx bx-search'></i> 
                             </a>
                         </li>
                         
@@ -112,54 +120,41 @@
                 <h2 class="section__title"> About me</h2>
 
                 <div class="about__container container grid">
-                    <dic class="about__data">
-                        <div class="about__info">
-                            <div class="about__box">
-                                <i class='bx bxs-award about__icon'></i>
-                                <h3 class="about__title">Computer Science & Engineering Graduate Student</h3>
-                                    <span class="about__subtitle"> 
-                                        <a href="#education" class="button2"> View Education</a>
-                                    </span>
-                                
-                            </div>
+    <div class="about__data">
+        <div class="about__info two-row-grid">
+            <div class="about__box">
+                <i class='bx bxs-award about__icon'></i>
+                <h3 class="about__title">Computer Science & Engineering Graduate Student</h3>
+                <span class="about__subtitle"> 
+                    <a href="#education" class="button2"> View Education</a>
+                </span>
+            </div>
 
-                            <div class="about__box">
-                                <i class='bx bxs-briefcase-alt-2 about__icon'></i>
-                                <h3 class="about__title"> Completed Multiple Projects</h3>
-                                    <span class="about__subtitle"> 
-                                        <a href="#projects" class="button2"> View Projects</a>
-                                    </span>
-                                
-                            </div>
+            <div class="about__box">
+                <i class='bx bxs-briefcase-alt-2 about__icon'></i>
+                <h3 class="about__title"> Completed Multiple Projects</h3>
+                <span class="about__subtitle"> 
+                    <a href="#projects" class="button2"> View Projects</a>
+                </span>
+            </div>
 
-                            <div class="about__box">
-                                <i class='bx bxs-briefcase-alt-2 about__icon'></i>
-                                <h3 class="about__title"> Research Interests </h3>
-                                    <span class="about__subtitle"> 
-                                        <a href="#research" class="button2"> View Research </a>
-                                    </span>
-                                
-                            </div>
+            <div class="about__box research-center">
+                <i class='bx bxs-briefcase-alt-2 about__icon'></i>
+                <h3 class="about__title"> Research Interests </h3>
+                <span class="about__subtitle"> 
+                    <a href="#research" class="button2"> View Research </a>
+                </span>
+            </div>
+        </div>
 
-                            <!-- <div class="about__box">
-                                <h3 class="about__title"></h3>
-                                    <span class="about__subtitle">
+        <p class="about__description">
+            Hello! I'm Shreya Adrita Banik, a Computer Science and Engineering graduate student who is passionate about creating innovative solutions and sharing knowledge. With expertise in modern technologies, I strive to make a difference through technology. 
+            My research interests lie in Natural Language Processing, LLM Security and Bias Detection, Image Processing, and Machine Learning.
+        </p>
 
-                                    </span>
-                                
-                            </div> -->
-                        </div>
-                        <p class="about__description">
-                            Hello! I'm Shreya Adrita Banik, a Computer Science and Engineering graduate student who is passionate about creating innovative solutions and sharing knowledge. With expertise in modern technologies, I strive to make a difference through technology. 
-                            My research intrests lie in Natural Language Processing, LLM Security and Bias detection, Image processing and Machine Learning.
-                        </p>
-
-                        <a href="#contact" class="button"> Contact Me</a>
-
-
-                    </dic>
-
-                </div>
+        <a href="#contact" class="button"> Contact Me</a>
+    </div>
+</div>
             </section>
 
             
@@ -242,7 +237,7 @@
                     </div>
                 </div>
             
-
+<br>
             <h3 class="section__title" id="education"> Education</h3>
             <div class="education__container">
                 <div class="education__content">
@@ -598,11 +593,11 @@
             </section>
 
 
-            section class="work section" id="research">
+            <section class="work section" id="research">
                 
                     <span class="section__subtitle"> My Work</span>
                     <h2 class="section__title"> My Research</h2>
-                
+                <p class="about__description">My current research interests include Natural Language Processing (NLP), LLM security, Adversarial ML, bias detection, <br> image processing, and security in the Internet of Medical Things (IoMT). I have hands-on experience in NLP,<br> leveraging large language models(LLMs), and applying machine learning techniques to real-world problems.</p>
                     <div class="projects__container container grid">
                         <div class="projects__content">
                             <h3 class="projects__title">Undergraduate Thesis Paper</h3>
@@ -613,7 +608,7 @@
                                         <p class="project__description">
                                            This research investigated political bias in media discourse on the Israel-Palestine conflict. A comprehensive dataset of 15,000+ entries with 7 class labels was built and then applied NLP and network analysis to detect bias, sentiment, and polarization, incorporating geographic context to explore regional variations. Multiple LLMs were fine-tuned, with RoBERTa achieving a weighted F1 score of 0.7741 and an accuracy of 0.7717, showing strong performance across the 7 class labels.
                                         </p>
-                                        
+
                                         <!-- <a href="https://github.com/shreyaadritabanik/Movie-Review-Classifier-using-NLP" 
                                            target="_blank" class="project__link">View on GitHub</a> -->
                                     </div>
@@ -746,12 +741,13 @@
                         <a href="#about" class="footer__link">About</a>
                     </li>
 
-                    <li>
-                        <a href="#work" class="footer__link">Work</a>
-                    </li>
+                    
 
                     <li>
                         <a href="#skills" class="footer__link">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#research" class="footer__link">Research</a>
                     </li>
                 </ul>
 

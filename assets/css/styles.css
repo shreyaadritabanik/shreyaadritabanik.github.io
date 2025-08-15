@@ -436,8 +436,28 @@ about__subtitle{
 }
 
 .about__description{
+  text-align: center;
   margin-bottom: 2rem;
 }
+
+.two-row-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 boxes in first row */
+    grid-auto-rows: auto;
+    gap: 2rem; /* space between boxes */
+}
+
+.research-center {
+    grid-column: 1 / -1; /* span full width */
+    justify-self: center; /* center in the row */
+    text-align: center;
+    width: 50%; /* adjust as needed, e.g., 60% or 70% */
+    padding: 1.5rem;
+    box-sizing: border-box;
+    
+}
+
+
 
 
 /* Timeline structure */
