@@ -569,7 +569,6 @@ contact__card-title, contact__card-data{ font-size: var(--small-font-size); }
   padding: 3rem 0 .5rem;   /* was 4.5–6.5rem */
 }
 .section__title {
-  font-size: 1rem;
   margin-bottom: 1rem;
 }
 .section__subtitle {
@@ -582,7 +581,7 @@ contact__card-title, contact__card-data{ font-size: var(--small-font-size); }
 .skills__content,
 .projects__content,
 .contact__card {
-  padding: 1rem;           /* reduce from 1.5rem+ */
+  padding: 0.8rem;           /* reduce from 1.5rem+ */
   border-radius: .5rem;    /* less rounded */
 }
 
@@ -592,13 +591,23 @@ contact__card-title, contact__card-data{ font-size: var(--small-font-size); }
 }
 
 .education__content {
-  padding: 1rem;
+  padding: 0.8rem;
   border-radius: .75rem;
 }
 
 .education__title {
   font-size: .95rem;
   margin-bottom: .75rem;
+}
+
+.experience__title {
+  
+  margin-bottom: .75rem;
+}
+
+
+.experience__details {
+  font-size: .8rem;
 }
 
 .timeline {
@@ -616,10 +625,4 @@ contact__card-title, contact__card-data{ font-size: var(--small-font-size); }
 .gpa {
   font-size: .8rem;
 }
-.section__title {
-  font-size: 1rem;         /* smaller section headings */
-  margin-bottom: 1rem;
-}
-.section__subtitle {
-  font-size: .7rem;
-}
+
